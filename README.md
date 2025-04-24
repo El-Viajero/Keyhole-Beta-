@@ -12,8 +12,6 @@
 - **Keyword Extraction**: Displays the top 10 most frequent words, with optional exclusion filters.
 - **Domain Crawling**: Recursively analyze multiple pages within a domain.
 - **Named Entity Recognition (NER)** _(NEW)_: Identifies people, organizations, dates, and locations from content.
-- **Entity Relationship Mapping** _(NEW)_: Maps relationships between co-occurring named entities in reports, viewable in a dedicated GUI tab.
-- **Intelligence-Style Report Formatting** _(NEW)_: Reports are now structured with emoji-coded sections and grouped entities for clarity and readability.
 - **Configurable Presets**: Save and load excluded keyword sets.
 - **Modern GUI**: A dark-themed interface built with `customtkinter`, now includes a Relationships tab and charting support.
 
@@ -40,6 +38,11 @@ Install dependencies:
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 ```
+
+## 🌟 Coming Soon
+
+- **Entity Relationship Mapping** _(NEW)_: Maps relationships between co-occurring named entities in reports, viewable in a dedicated GUI tab.
+- **Intelligence-Style Report Formatting** _(NEW)_: Reports are now structured with emoji-coded sections and grouped entities for clarity and readability.
 
 ## 💡 Usage
 
