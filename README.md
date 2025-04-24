@@ -75,8 +75,6 @@ Reports are saved to your OneDrive `Documents/Reports` directory by default.
 
 - **Full GUI integration for domain-wide crawling**
 - **Named Entities now included in all report types**
-- **Intelligence-style formatting** for professional reporting
-- **Entity Relationship Mapping** in a new tab to uncover connections
 
 ## 📁 Directory Structure
 
