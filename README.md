@@ -1,7 +1,7 @@
 # 🔍 Keyh0le {Beta}
 PLEASE NOTE THIS APP IS STILL IN BETA. ISSUES ARE EXPECTED TO OCCUR. CORE FEATURES WORK WITH MINOR BUGS. 
 
-**Keyh0le** is a desktop tool that allows users to analyze website content for keyword frequency, readability, sentiment, and automatic summarization. Built with a focus on simplicity and user experience, Keyhole-Beta combines NLP, sentiment analysis, and modern GUI design to provide rich insights from web pages.
+**Keyh0le** is a desktop tool that allows users to analyze website content for keyword frequency, readability, sentiment, and automatic summarization. Built with a focus on simplicity and user experience, Keyh0le combines NLP, sentiment analysis, and modern GUI design to provide rich insights from web pages.
 
 ## 🚀 Features
 
