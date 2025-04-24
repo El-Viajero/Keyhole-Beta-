@@ -1,17 +1,21 @@
 # 🔍 Keyh0le {Beta}
-PLEASE NOTE THIS APP IS STILL IN BETA. ISSUES ARE EXPECTED TO OCCUR. CORE FEATURES WORK WITH MINOR BUGS. 
 
-**Keyh0le** is a desktop tool that allows users to analyze website content for keyword frequency, readability, sentiment, and automatic summarization. Built with a focus on simplicity and user experience, Keyh0le combines NLP, sentiment analysis, and modern GUI design to provide rich insights from web pages.
+**Keyh0le {Beta}** is a desktop tool that allows users to analyze website content for keyword frequency, readability, sentiment, and automatic summarization. Built with a focus on simplicity and user experience, Keyh0le {Beta} combines NLP, sentiment analysis, and modern GUI design to provide rich insights from web pages.
 
 ## 🚀 Features
+
+### 🔄 Updated & New Additions
 
 - **Summarization**: Automatically condense full pages or sections using transformer-based models.
 - **Sentiment Analysis**: Understand the tone of content with VADER sentiment scores.
 - **Readability Metrics**: Includes Flesch Reading Ease scoring.
 - **Keyword Extraction**: Displays the top 10 most frequent words, with optional exclusion filters.
 - **Domain Crawling**: Recursively analyze multiple pages within a domain.
+- **Named Entity Recognition (NER)** _(NEW)_: Identifies people, organizations, dates, and locations from content.
+- **Entity Relationship Mapping** _(NEW)_: Maps relationships between co-occurring named entities in reports, viewable in a dedicated GUI tab.
+- **Intelligence-Style Report Formatting** _(NEW)_: Reports are now structured with emoji-coded sections and grouped entities for clarity and readability.
 - **Configurable Presets**: Save and load excluded keyword sets.
-- **Modern GUI**: Built with `customtkinter` for a sleek dark-themed interface.
+- **Modern GUI**: A dark-themed interface built with `customtkinter`, now includes a Relationships tab and charting support.
 
 ## 🛠️ Installation
 
@@ -25,15 +29,17 @@ PLEASE NOTE THIS APP IS STILL IN BETA. ISSUES ARE EXPECTED TO OCCUR. CORE FEATUR
   - `customtkinter`
   - `textstat`
   - `requests`
+  - `spacy`
+  - `langdetect`
+  - `validators`
+  - `matplotlib`
 
 Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+python -m spacy download en_core_web_sm
 ```
-
-### Optional: GPU acceleration for transformers
-To speed up summarization, configure your environment with CUDA support.
 
 ## 💡 Usage
 
@@ -50,27 +56,37 @@ You can:
 - Enter a URL
 - Choose analysis mode: `section`, `full`, or `domain`
 - Set summary size: `small`, `medium`, `large`
-- Optionally specify section titles or exclude keyword sets
+- View named entity maps and structured summaries
+- Load saved reports and explore relationships between entities
 
 Reports are saved to your OneDrive `Documents/Reports` directory by default.
 
-### Report Output
+### New DLC Module (Drop-in Lightweight Components)
 
-Each report contains:
-- Top 10 common words (excluding custom-defined stop words)
-- Text summary
-- Sentiment analysis
-- Readability score
+- **URL Validation**: Ensures valid input before analysis
+- **Language Detection**: Warns if non-English content is detected
+- **Named Entity Recognition**: Identifies structured entities in content
+- **Common Word Chart**: Visualizes word frequency with a chart
+
+### New Features Added
+
+- **Full GUI integration for domain-wide crawling**
+- **Named Entities now included in all report types**
+- **Intelligence-style formatting** for professional reporting
+- **Entity Relationship Mapping** in a new tab to uncover connections
 
 ## 📁 Directory Structure
 
 ```
-Keyhole-Beta/
-├── core.py           # Core analysis logic and report generation
-├── GUI.py            # CustomTkinter-based user interface
-├── main.py           # Entry point
-├── config/           # Stores presets and exclude lists
-└── output reports/   # Automatically generated into user's OneDrive/Documents
+Keyh0le {Beta}/
+├── core.py             # Core analysis logic and report generation
+├── GUI.py              # CustomTkinter-based user interface
+├── main.py             # Entry point
+├── DLC.py              # Lightweight feature integration helpers
+├── ReportFormatter.py  # Structures and beautifies report output
+├── RelationExtractor.py# Extracts entity relationships from reports
+├── config/             # Stores presets and exclude lists
+└── Reports/            # Output reports by type (Section, Full, Domain)
 ```
 
 ## 📓 Example
@@ -94,11 +110,12 @@ Then click **Run Analysis**. A report will be saved locally and shown in-app.
 - [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
 - [Textstat](https://github.com/shivam5992/textstat)
 - [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
+- [spaCy](https://spacy.io)
+- [Langdetect](https://pypi.org/project/langdetect/)
+- [Validators](https://pypi.org/project/validators/)
 
 ## 👨‍💻 Author
-El-Viajero
 
 **Robert Franke**
 
 Contact details available via the **About** tab in the app.
-
